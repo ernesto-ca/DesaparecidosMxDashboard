@@ -4,6 +4,10 @@ Una aplicación web interactiva (dashboard) para analizar, visualizar y aplicar 
 
 La meta de este proyecto es que a través de una herramienta profesional y fácil de usar, los usuarios puedan subir sus bases de datos y obtener instantáneamente el procesamiento, las estadísticas y la ejecución de modelos matemáticos para descubrir patrones. Asi mismo, se busca comprobar empíricamente la hipótesis ciudadana de que existe un repunte de casos durante los días jueves.
 
+## DEMO
+
+![demostracion](demo/desaparecidos-mx-dashboard.gif)
+
 ## Estructura del Proyecto: Archivos y Modelos
 
 
