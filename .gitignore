@@ -1,0 +1,8 @@
+# Data
+data/
+# Models Cache
+modelos/__pycache__/
+# Saved Models
+modelops/saved_models/
+# Scripts Cache
+scripts/__pycache__/
