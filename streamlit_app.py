@@ -93,7 +93,7 @@ if df_master.empty:
 else:
     stats = analizar_datos(df_master)
     
-    st.header("📊 Análisis Básico a partir de los Datos Maestros")
+    st.header("📊 Análisis Básico a partir de los Datos")
     if 'q6' in stats:
         st.info(f"**Periodo temporal:** Del **{stats['q6']['fecha_inicio']}** al **{stats['q6']['fecha_fin']}**")
     
