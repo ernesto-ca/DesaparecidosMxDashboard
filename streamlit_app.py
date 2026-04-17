@@ -72,10 +72,9 @@ mes = st.sidebar.number_input(
 if st.sidebar.button("Predecir..."):
     prediccion = predecir_hora_desaparicion(sexo, edad, dia_semana, mes)
     if prediccion:
-        st.sidebar.write(f"Predicción: {prediccion['etiqueta']}")
-        st.sidebar.write(f"Probabilidad: {prediccion['prob_dia']}% (Día) - {prediccion['prob_noche']}% (Noche)")
+        st.sidebar.success(f"Predicción: {prediccion['etiqueta']}" + f"\nProbabilidad: {prediccion['prob_dia']}% (Día) - {prediccion['prob_noche']}% (Noche)")
     else:
-        st.sidebar.write("No hay modelo entrenado para predecir.")
+        st.sidebar.error("No hay modelo entrenado para predecir.")
 else :
     ""
 
