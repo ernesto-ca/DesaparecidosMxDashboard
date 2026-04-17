@@ -97,7 +97,7 @@ else:
     if 'q6' in stats:
         st.info(f"**Periodo temporal:** Del **{stats['q6']['fecha_inicio']}** al **{stats['q6']['fecha_fin']}**")
     
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     
     with col1:
         st.metric(label="Total Registros", value=len(df_master))
@@ -115,6 +115,10 @@ else:
             st.metric(label="Localidad Top 1", value=f"{stats['q4']['top1_nombre']} ({stats['q4']['top1_casos']})")
         if 'q5' in stats:
             st.metric(label="Año crítico", value=f"{stats['q5']['año']} ({stats['q5']['casos']})")
+
+    with col4:
+        if 'q7' in stats:
+            st.metric(label="Día con más casos", value=f"{stats['q7']['dia_top_nombre']} ({stats['q7']['dia_top_casos']})", help="Indicador para la Hipótesis del repunte en Jueves")
 
     st.subheader("Exploración Visual de Datos")
     edades = df_master['edadactual'].dropna()

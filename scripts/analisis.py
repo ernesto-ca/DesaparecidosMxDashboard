@@ -88,6 +88,19 @@ def analizar_datos(df):
                 'fecha_fin': max_date
             }
 
+    # 7. Día con más desapariciones (Hipótesis del Jueves)
+    if 'dt_hechos' in df.columns:
+        dt_valida = df['dt_hechos'].dropna()
+        if not dt_valida.empty:
+            conteo_dias = dt_valida.dt.dayofweek.value_counts()
+            if not conteo_dias.empty:
+                max_dia_idx = conteo_dias.idxmax()
+                mapa_dias = {0: 'Lunes', 1: 'Martes', 2: 'Miércoles', 3: 'Jueves', 4: 'Viernes', 5: 'Sábado', 6: 'Domingo'}
+                resultados['q7'] = {
+                    'dia_top_nombre': mapa_dias.get(max_dia_idx, 'Desconocido'),
+                    'dia_top_casos': int(conteo_dias.iloc[0])
+                }
+
     return resultados
 
 
