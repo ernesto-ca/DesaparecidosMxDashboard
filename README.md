@@ -1,3 +1,5 @@
+# TRABAJO EN PROGRESO, FALTA FORMULARIO PARA EXTRACCION DE DATOS...
+
 # Análisis de Desaparecidos en México (Dashboard Interactivo)
 
 Una aplicación web interactiva (dashboard) para analizar, visualizar y aplicar modelos de inteligencia artificial a la información sobre casos de personas desaparecidas en México.
